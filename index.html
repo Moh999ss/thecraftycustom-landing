@@ -1,130 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TheCraftyCustom - Handmade & Resin Art</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-    body {
-      background: #fff7f2;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #ffede1;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2rem;
-      color: #e57200;
-    }
-    nav {
-      background: #ffffff;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      border-bottom: 1px solid #eee;
-    }
-    nav a {
-      text-decoration: none;
-      color: #e57200;
-      font-weight: 500;
-    }
-    .categories {
-      padding: 2rem;
-      text-align: center;
-    }
-    .categories h2 {
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .grid div {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-    .grid div:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-    .cta {
-      margin: 2rem 0;
-      text-align: center;
-    }
-    .cta a {
-      text-decoration: none;
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.5rem;
-      background: #e57200;
-      color: white;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    .cta a:hover {
-      background: #c95d00;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #fff0e0;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Crafty Custom</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #e3b3c2;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f8d7da;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        nav button {
+            background-color: #fff;
+            border: 1px solid #e3b3c2;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        nav button:hover {
+            background-color: #e3b3c2;
+            color: #fff;
+        }
+
+        section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid #f3c4cf;
+            border-radius: 10px;
+            padding: 15px;
+            max-width: 250px;
+            text-align: center;
+            background-color: #fff0f3;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #e3b3c2;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>TheCraftyCustom</h1>
-    <p>Handmade Art | Resin Decor | Personalized Gifts</p>
-  </header>
+    <header>
+        <h1>Welcome to The Crafty Custom</h1>
+        <p>Your one-stop shop for handcrafted gifts</p>
+    </header>
 
-  <nav>
-    <a href="#rakhi">Rakhi Collection</a>
-    <a href="#gifts">Return Gifts</a>
-    <a href="#products">All Products</a>
-    <a href="#art">Art Supplies</a>
-    <a href="#workshops">Workshops</a>
-  </nav>
+    <nav>
+        <button onclick="scrollToSection('home')">Home</button>
+        <button onclick="scrollToSection('pooja-thali')">Pooja Thali</button>
+        <button onclick="scrollToSection('varmala-preservation')">Varmala Preservation</button>
+        <button onclick="scrollToSection('return-gifts')">Return Gifts</button>
+        <button onclick="scrollToSection('contact')">Contact</button>
+    </nav>
 
-  <section class="categories">
-    <h2>Shop by Categories</h2>
-    <div class="grid">
-      <div id="rakhi">Rakhi Collection</div>
-      <div id="gifts">Return Gifts</div>
-      <div id="products">All Products</div>
-      <div id="art">Art Supplies</div>
-      <div id="workshops">Workshops</div>
-    </div>
-  </section>
+    <section id="home">
+        <h2>Explore Our Handmade Collection</h2>
+        <p>Made with love, crafted with care.</p>
+    </section>
 
-  <div class="cta">
-    <a href="https://wa.me/918447784771" target="_blank">WhatsApp Us</a>
-    <a href="https://www.instagram.com/thecraftycustom" target="_blank">Instagram</a>
-  </div>
+    <section id="pooja-thali">
+        <h2>Pooja Thali</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://thecraftycustom.com/assets/img/pooja-thali.jpg" alt="Pooja Thali">
+                <p>Beautifully designed thalis for every occasion</p>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    &copy; 2025 TheCraftyCustom. All Rights Reserved.
-  </footer>
+    <section id="varmala-preservation">
+        <h2>Varmala Preservation</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://thecraftycustom.s3.ap-south-1.amazonaws.com/images/515604227_722427627210029_8277680314099453239_n.jpg" alt="Varmala 1">
+            </div>
+            <div class="product">
+                <img src="https://thecraftycustom.s3.ap-south-1.amazonaws.com/images/515003670_1794473778137524_1441374116747791540_n.jpg" alt="Varmala 2">
+            </div>
+            <div class="product">
+                <img src="https://thecraftycustom.s3.ap-south-1.amazonaws.com/images/516493248_700483469568319_2352515986452653281_n.jpg" alt="Varmala 3">
+            </div>
+            <div class="product">
+                <img src="https://thecraftycustom.s3.ap-south-1.amazonaws.com/images/515801914_715256464721651_2910427541626949615_n.jpg" alt="Varmala 4">
+            </div>
+            <div class="product">
+                <img src="https://thecraftycustom.s3.ap-south-1.amazonaws.com/images/516879889_1020496713489486_1011248746410017423_n.jpg" alt="Varmala 5">
+            </div>
+            <div class="product">
+                <img src="https://thecraftycustom.s3.ap-south-1.amazonaws.com/images/516452957_1055150436332352_3055722323903869792_n.jpg" alt="Varmala 6">
+            </div>
+        </div>
+    </section>
+
+    <section id="return-gifts">
+        <h2>Return Gifts</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://thecraftycustom.com/assets/img/return-gift.jpg" alt="Return Gift">
+                <p>Custom gifts your guests will cherish</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For orders and customization, reach out to us on Instagram: <strong>@thecraftycustom</strong></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 The Crafty Custom. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
+
 </html>
